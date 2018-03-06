@@ -1,0 +1,196 @@
+
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/controller.js"></script>
+
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+	
+		<body ng-app='MyApp' ng-controller='MyController'>
+
+
+
+
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle"
+							data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+						
+						<span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATEhUTExAVEhUXFRUVFRUVDw8PFRcVFRUWFhUYGBUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGC0lICUtLS0tLS0tLS8tLS0tLS0tLS0tLS0tLS8tLS0tLS0tLS0tLS8tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAAAQMEBQYHAv/EAEEQAAEDAgMFBQQHBQgDAAAAAAEAAhEDMQQhYQUSQVFxBiKRobEyUoHBEyNTYnKywkKCktHwByQzNENzovEUY4P/xAAbAQEAAgMBAQAAAAAAAAAAAAAABQYCAwQBB//EADgRAAEDAgIGCAUEAgMBAAAAAAABAgMEMQURIUFRYXGxEjIzgZGhwdETInLh8CM0QvEVUhRDUyT/2gAMAwEAAhEDEQA/AO3oBPJACeAQAnhxQAmNSgBMIBMXQCeJQAHickABQAGeiATPRAJ5IATwCAE8AgBPxKAEwgExdAJ4lAAeJQAFAAZ6IADPRAJ5IATwCAE8AgBPigJlAEBB5ICNAgFsggFtSgFtSgFszdANSgGpQC/RAL9PVAL9EBRr4um3J1RrermjwCzbG93VRVNMlRFH13InFSzqbewwyFSejHn5LclHMuo5XYrSt/n4IvsUT2kw4yG+f3P5lZ/8GXcalxmm3+AHaXD/AH5/CP5otDLuPExmmXb4FWnt/DfaQdWPHyWK0cyauRtbitK7+Xii+xeUMbSd7NRrjyDgT0haXRPb1mqdcdTDJ1HoveV9StZuGpQC+ZsgF+nqgF+iAXyCAaBALZBALdUAtqUBIEXugJQEE8AgItkEAtqUAtqUAtmboBqUA1KAX6ICjisXTYJe8Nbrc9BcrNkbnrk1MzTNPHCnSkdkYHG9qOFJmXvOy8Gj+a748P8A918CFqMby0RN719jDYnatepkahjk3uDpAXaynjZZpEy11RL13rwTRyLPotxyb1EoeiUFwguEA1KHhd4baVZns1HAcid4eByWp8Eb+s06oqyeLqPXmnmZjB9qD/qsy5sy8Wn+a4pMP1sXxJaDG1TRK3vT2+5n8JjadYSx4cOIsfiDmFwSRPjXJyE1BUxTJnG7Pn4Fe/RazeL5BANAgFsggFuqAW1KAWzN0BIHEoCUBBPK6Ai2pQC2pQC2ZugGpQDUoCHOESTAGeZgdSvURV0IeKqImamubU7S3bRz++Rl+6OPUqRgoM9MngQNZjOWbYPH2T3NcrVnPMucXHiSZP8A0pJrUamTUyQgHvc93Seua7zxKyMBPAIN4lAJQXEwguEA1KDgNUAQC6Htj1TqEGWktI4gkHxXiojkyWx61zmL0mrkpsOzO0pybWtbfAz+IHqPBR01Ci6Y/AnaTGVTJs/inqnt4Gy06gcAWEEHiDIhRiorVyUsDHteiOauaKerZBeGQt1QC2pQC2ZugGpQEgcSgJlAQTHVARbUoBbM3QDUoAOZQFHF4plNpe8w0W5k6DiVnHG6R3RaaZ52QsV71yQ0va22Klcx7NMWbN9XcypunpmxJtXaVOtxCSoXKzdnvtXkY6V0HBYSgE8Ag3qJQCUFxKC4QXGpQbkCDcEAugsJlBYSgE8EG8vtl7VqUD3c2n2mk5HXQ6rRPTslTTfadlHWyUzs00prT8spumAx1OqzeYZ5g3B1ULLE6J3RcW2mqY6hnTYv24lzbUrUdAtmboBqUA1KAkZ5oD1KA8kwgItmboBqUA1KAo4zFMpsL3mGjhxJ4ADms443SORrTTPOyFiveuhDRNqbRfXfvOyA9lvAD+eqnoIGxNyT+ynVdW+of0ndybPuWcrccthKATwQcRKASguJQXEoCpQoPeYa0uPJoJhYue1iZuXIzjjfIvRjaqruJxGGqMPfY5h4bwI8OaMe16ZtXM9lhkiXovaqcSksjXYTKCwmUFhKATwQcRKASguXOz8c+i8PYc+I4OHIrXLC2RvRcb6apfA/ps701KhvezscyqwPab5EcQfdUDNE6J3RcXKmqWVEaPZ/S7C51K1HQNSgF8zZASM+nqgPSA8nLNARqUA1KAhzhBcTDRnnlkOJXqIqrkh4qo1M1ND25tU135ZU25MHP7x1KnqWnSJu9blNxCtWpk0dVLe/FfIxsrpOGwlAJQCUAlBcSgEoBKA3vs1h2toMdGbhvE6m3lAUDWPV0q56tBccLibHTNVNelSttvDtqUKm8LNLm6FoJBWFM9Wyty25GyvibJTvRdSKqcUOfTKsJSrCUFhKASgEoBKC4lBcSgL7Y+0nUKm/dpyc3mNNQtFRAkrMlvqOuiq3U0nSS2tNv3TUb9RqNe0PBlpEjoVX3NVqqi3Lox7XtRzVzRT3fM2XhkL9PVATM9EB6QHk8ygI1KAX6IDWO1+1P9Bp5F/Tg35+ClMPp8/1F7vcr+M1mX6De/0T1NVlSpXbCUAlAJQCUFxKC4lAJQCUB0LYInD0ptuBV2q7Z/Eu2H/tY+CFbamdGry+jf8AHulYwdqzinM2VfYSfSvI5vKshRbCUAlAJQCUFxKC4lAJQCUBsnZHaUO+hee6ZLJ4OuR8b+PNRtfBmnxE7ydwar6LvgOXQtuOtO/8ubbfp6qILKL9PVATPJATCAgjiUBF+iAoY/FCnTdUd7LRPU8B8TAWyKNZHo1NZpqJmwxukdqObV6znuc5xkuJJOp+SsrWo1EalkKM97nuV7rrpPEr0wEoBKASguJQXCAIOAQBAdE2Bnh6XLcHxVdqu2fxLth/7WPghW2qZo1eX0b/AMpWEHas4pzNlX2En0ryOayrKUUSgEoBKASguJQBBwCAICWPIIIMEEEHUWKKiKmS2PUVWqipc6PsrGivSa8ZSO8PvDIjoq3PF8KRWl4pKhJ4Wybb8dZd3yC0nSTPAICYQEEICL9PVAar23xvsUQfvu8w0evgFK4bFeReHuV7HKjLowpxX09fA1SVLFeEoN6iUAlBcSguJQBBuQSgCCwmUFjo2wM8NS5bgVcq+2fxLth/7WPghV2qfqaoH2b/AMpWEHas4pzNlX2En0ryOaSrMUXeolBvUSguJQXEoLiUG4IOAlAJQWEoLGy9isZD3UZycN4fiGRHxEfwqMxKLNqPTVoJ3A5+i90S69KcUv5cjcNAocspOgQEoCCJ6ICL9EBzbbmK+kr1HA5b26Oje6I8J+KstNH0Imt/NJR66X4tQ9+/JOCaCxlbzl3iUAlBcSguJQBDzgJQ9EoBKCwlBY6P2fzw1ED3Aq3V9s/iXbD/ANrHwQrbWP1FUD7Kp+UrCDtWcU5myr7CT6V5HMpVnKIJQ9uJQXEoBKDgEG4SgEpcWEoLCUBcbPxX0dVjxluuBP4bO8iVrmj+JG5m1DdTy/ClZJsXy1+R0+eAVXL4SMsuKA9IDyc+iAt9o4jcpVHD9ljj8QCQFsiZ05Gt2qhpqJfhRPfsRV8jls8FaShJvEoBKC4QXCAINyBAEFhdBYSgsJQHS9hMcMPSaQWkMbIIgjqOarNUqLM9U2l4oGq2mjRyZLkhV2m0mjVa0Ek03gACTJafNYwrlI1V2pzNlSirC9E2LyOYHLLj/V1aCh8SEFwgCDcgQBAEFhKCwlAJQbweSC9zpew8Rv4ek65LAD1b3T5gqs1LOhM5u8vFDL8SnjcuzloL8ZdVoOslAQeSAw/ayru4WoBx3W+LxPlK7KBuc7e/kR2LP6NI/uTxVDnkqxFNEoLhBcILhBuCDcEFhKCwlBYv9l7JrVzFNvd4vOTR8eJ0C556mOFPmXu1nXS0UtQvyJo2rb84G67I2BRoQQN+pxe4W/COHrqoSorJJdFk2e5Z6PDYqf5ru2r6bOZltAuQkRbqgMXtfYNGtmRu1OD23PUWIXXT1kkOhNKbDgrMOhqdK6HbU9dppO1dj1sOe+Jbwe3Np5dDofNTcFTHMnyrp2ayr1VDNTL86aNqW+xj10HHuQIOAQCUFhKCwlAJQcQgEoLm+9i6v92jiHvHj3v1KAxJuU2e1E9i24K7Oly2Kvv6meAi91wEsSgIJ4BAYDtsYw0Di9vzPyUhhvbdykTjX7bvQ0JTxUrhBcIAg4BAEFglxY90aTnuDWNLibACSV45yNTNy5IZMY57ka1M12G2bH7JDJ1cz9xpy/edx6DLqoioxLP5YvH2LDR4KifNUadyeq6+HM2pjA0BrAGgZAAAADQKKVVVc1J9rUamTUyQ9WyC8PRbqgFtSgFszdAQ5gIO8AQciCJEco4r1FVFzQ8VEVMlNX2x2Sa6X0CGH7Mnu/A/snS3RSlPiSpol079f3IKswVrs3QaF2au7Zy4Go4ig9ji17Sxw4EQeuoUux7Xp0mrmhXZI3xO6D0yUprK5hYILCUAQbwgCAILm7dg3fU1P9z9DVCYon6jeHqpZ8CX9F/1eiGzAcSownCUBBPAIDX+24/u3/0afUfNSGGr+t3KRGNJ/wDN3oaEp8qdwgCAIAgEpcWM3sbs1Wrw531VPmR3nD7rfmfNcNRXRxaE0qSdHhUs+TnfK3z7k9V8zdtnbNpURu0mx7zruPU/0FCTTvlXN6+xZ6akip25Rp3614qXegWk6RbIIBbqgFtSgFszdANSgGpQC+ZsgLXH7PpV27tRgI4GzhqDcLbFM+Jc2KaKiminb0ZEz5pwU0vbHZirSl1OatPQd8dQLjUeCm6evZLodoXyKzV4TLBm6P5m+ad2vu8DAyu8id4QBAEAQXCA3bsEPqahP2n6GqDxTtG8PVSz4D2L/q9ENnA4lRhOEygIJ8UBhu19OcJU4kFh8HtnylduHuyqG9/IjcXb0qR+7JfNDnSsRTgh4EPQgLrZ2zqtd27TYTzNmjq7h0utU07Ikzevupvp6aWd3RjTPfqTiv4puuxuzFKlDn/WvHEjug/db8z5KEqa98vyt0J5lmo8Jigyc/5neScE9eRnjnkFwEsNAgFsggFuqAt8Xj6NETUqNaTzcJPQXK2RwySdRqqaZaiKFM5HIhUwuIa9gqNMhwkGCJHDIrF7FY5WuuhnFI2RiPbZbE1qgY1z3GA0Fx4wAJPVeNarlRqaz170Y1XLZNJQwW0aNXNlVrtA7MdW3C2SQSR9dqoaoaqGbs3ovPwLq+ZWo3i/T1QC/T1QC+QQGF2z2bo1pLfq6nvAZH8TePW67aeuki0LpT8sRlZhcVR8yfK7bt4p+KaRtPZlag7dqNgcHDNp6Hnoc1OQ1EcyfIvdrKvU0ktO7KRO/UpZytxziUFwgCA37sRTjDbx/ae8+EN/SoDEnZz5bET39S2YK3Kmz2qvt6GwDPNR5LkygIJhAWu08Pv0ajeLmOaOpBjzW2B/Qka7YqGipj+LC9m1FTyOUg8VayhZ5hBwCCxIzQ9Q61h6DGtDGNDGjgBAVRe9z16TlzU+gRxtjajWJkhUvkFiZjQIC0xu1KFHJ9VrTymXfwjMrdHTySdRqqc81XDD2j0Tn4XMBjO2lNuVKm5595x3B1jMnyXfHhTl67suGkiZsdjTsmqu9dCe/IwGN7SYqpepuA8KY3PP2vNSEdDBH/HNd+n7ETNilVL/ACyTdo87+Ziic5Jkm5OZPxXXlkcC6VzOm9nP8rRJ+zaqxWdu/iXfD/2sX0oVtrj6isT9lU/IVhT9qzinM2VfYSfSvI5WOfKytVyh2sZXBdosVTtVLm+7U748b+a5ZKKGS7cuGj7HfDidTDoR+e5dP38zPYPtqw5VaRbzcw7w8DBHmo+TCnf9bs+JLQ4620rMt6afzzM/gtrUK2VOq06Tuu/hOa4JKaWPrN9vEloayCbqPRd2vwXSXugWg6RoEB4rUmuaWOaHA3BAIPVZNcrVzauSmL2Ne1WuTNDlONYG1KjRYPeANA4gK1xqqsaq3VE5FCmaiSvalkVeZRWZquEG4SgOn9nsPuYakDl3A6NXd4+ZVXq39OZ67+WgvFBH8Omjbu56TIjPouc7D0gPJyzQEalAcs23hfosRUZEAOJH4Xd4eRVqppPiRNduKLWxfCqHsTb5LpLJbzlsJS4sAc0PU0KdSx+2cPSyfVa08QO87+EZqqxUssvVb7F5nrYIO0emey6+CGAxvbZoyo0ifvPO6P4RmfEKQjwpf5u8CJmx1qdkzvXR5f0a/je0GKqZGqWj3WfVjxGZ+JUhHRQx2bmu/SRM2I1MvWfkmxNH38zGT4ldRw30iUFwgEoNyHT+zf8AlaJP2bVV6zt38S8Yf+1i+lCttfOhWP8A6qn5CsKftWcU5myr7CT6V5HKQrWUOwlLixMoCEG9TJYLb2JpZMqkj3X/AFg88x8CFzS0cMl26d2g7YcQqYuq9cti6efoZ/A9tgMqtHP3mGfjuu/mo+XCv/N3j7/YlYcd/wDVnensvubBgNt4ar7FVpcf2Xdx3g75KPlpJous31JeCvp5uo9M9ll8FObbR/xqv+5U/OVZYezbwTkUyo0zSfUvNSgthp3IEBX2fhjVqsp+84D4T3j8BJWuV/QY566kNsEXxZWxprVE7tfkdZaPgBZVIv6JkTM9PVAekB5PMoCNSgNM7fYLNlcDL/Dd5lpP/LyU1hUuaOjXinqVzHYMlbMnBeaepqEqYuV6wlBYSgIQEygEoLiUFxKC4QcAgOo9mxOFoz9m1Vas7d/EvGH/ALWLghW2xnQrcvoqnx7hWFP2rOKczZV9hJ9K8jlEq2XKHYSgEoN6iUG8SgEoLkJYX0EygEoNyBAbR2CwO/VdWIyYN1urnX8B+ZRWKTZMSNNfJPvyJzA6fpSOlX+OhOK/bmb1fp6qCLQTPJAeoQHkjiUBF8zZAWu1MEK9J9M5BwyP3hm0/AgLbBKsUiPTUaKmBJ4nRrr/ABDk9am5ri1wgtJaRqDBVta5HIipZShuarHK1100HmV6eCUG9RKDeJQXEoLiUFxKDcglBwPdCk57g1rS5xMAC5Kxc5GornLkiGTGOe5GMTNVOq7HwrqdCnTdEtYAYzEj5KqVEiSSucllUvVJEsULGOuiIhWx1E1KdRgMbzHNBNpc0jwzWETkY9rl1KimyZivjcxNaKnihyfGYZ9N5pvbuubkR8weI1VtjkbI1HMXQUOWF8L1Y9MlQoyszXvUSg3qJQXEoLiUFxKDcgQbkCAloJMATOQHEk2Xm9QiLZLnU9hbO+hotp8bvPN5v8OHwVVqp/jSq/Vq4F5oqZKeFsevXxMhfIWXOdZM8AgJhAQQgIv09UAv0QGk9u9kwf8AyGDLJtWOBs13oD8FN4XU5p8F3d7FbxqjyX/kN4L6L6eBp8qZK9vUSg4iUFxKC4lAJQbhKAq4XDvqPDGNLnGwHqeQ1WD3tY1XOXJENkcb5HIxiZqp0js52fZh2yYdUI7zv0t5N9fJVusrHTrkmhupPVS34fhzaVua6XLdfRN3MzN+nquIkhfIIDF7f2LTxLN32Xt9l8W0PMHkuqlq3QO0W1p+aziraFlUzJdCpZfzUc0x2EqUXmm9u64eBHAg8QrNFK2RqOYugpk0L4XqyRMlT80FCVsNVxKC4lAJQbhKDcgQCUuLG09htkfSP+ncO4wwz7z+fQep0UVidT0W/Cbdb8PuTmDUfTf8ZyaEtx+3Pgb7fIWUAWkaBAToEBKAgieiAi/RAL5BAeK1JrmlhALSCHA2g3Cya5Wqipcxexr2q1yZopy7tDsh2Gq7l2GSx3McjqP6urTSVKTszS+spNdRupZOitlsvpxQxcrqOK4lBcSguEG5BKASgNq/s8E16n+3+oKKxfsm8fQnMBT9Z/D1N8q1WgS5wa0XJIaPEqAa1XLkiFnc5Gpm5cjC47tbhGZCoah5Uxvf8sm+a7osNnfqy4/mZHTYvSx/yzXdp87eZTwXbDCPgFxpH77cv4hI8YXsmGTssmfAxhximk6y9Fd/uZ2jXY4TTc145tcHDxC4XMc1cnJkSbHtembVzTcaX/aMIdQ5xU9WKawez+71K7j6fNH3+hp0qZK9cSguJQcBKDcglAJS4sX+xdlvxNUU25C73cGt4nryXPU1DYWK5e7ep1UdK6okRje9difljqmEwzabG02Dda0QP656qqySOkcrnXUu8UTYmIxqaEKugWBsGgQE2yQEoCCJ6ICL5BANAgFsggLPa2zademabxM5g8Wu4OC3QTuhf02/2c9TTMqI1Y/+l2nLtrbMqYeoWVBn+y4WcOY/rJWmnnZMzpN/opVVSyU8nQf3LqUspW85wg3IEG5AgEpcWLrAbRq0S40n7hcN0kBpMTMCRktUsDJkRHpmiG6CokgVVjXJVKWJxVSoZe9zzzc4u9VkyNrEyYiJwMJJHyLm9yrxUpSszDiJQcSpQxD6Zlj3MPNri0+IWL2NcmTkz4mTJHsXNqqnDQV8ftOtWDfpX7+7O6SGg5xMkDOwutcVPHDn0EyzNs9VLPl8R2eVi0lbjRcIOAQbkCAJcWLnZ+CqV6gp02yT4AcSTwAWqaVkTFe9dBtggfM9GMTNV8t6nUdibJZh6YpszN3viC53yHIcFVqmpdO/pL3JsLrR0jKaPoNvrXapkNAuc6xoEAtkLoCRl1QEoCDyQEaBALZBALdUAtqUBZ7W2XSr0yyqJ5Ee0082lboKh8D+kz+znqaWOoZ0Hp9uBzPbmxK2Fd3xLT7LwO6dNHaeqs9NVxztzS+tCnVlDJSuydpTUu32XcYtdRx7kCAJcWEpcWEoBKDeolBvUSguJQXEoLhBwCDgEAlLixkNj7IrYl+7TGQ9p59lo1PPRc9RUxwNzcvdrU6qSjkqHdFicV1J+bDpmxdj0sOzcpjM+28+04/IacFWKmpfO7N3cmwuFJRx0zOiy+tdamQ0C5zrGgQC2QugFtSgJGXVASgIJ4BARbIIBbqgFtSgFszdANSgPFeg17S2o0OaRm0iRCyY9zFRzVyUxexr2q1yZopo23OxThL8P3m3+jce8PwuN+hz6qcpcVR3yzaN+rvK3WYK5uboNO7X3KahUY4EhwLSLgggjqDZTKKjkzSxAuarFyVMlPMr255YSgEoeb1EoBKAJY9uJQ8uEG5Ah6EPCWgkgASTkABJJ6Lxdq2PURc8kubXsHsXUqQ+vNNnuD23dfdHn0UTVYoxvyxaV26vuTlFgr35Om0Js1/bmb5hcKym0U6bQxg4AR/2dVAySOkd0nLmpZY4mRNRrEyQq6BYGwaBALZC6AW1KAW6oCQOJQEoCCeAQEW6oBbUoBbM3QDUoBqUAvmbIBfp6oCx2nsihiBFSmDFnDuuHRwzhb4amWFfkX2OaopIZ0ykbnv1+JqG0uwlQSaFQPHuv7rugcMj5KYhxdq6JG5b0/PcgZ8CcmmJ2e5b+P8ARrOO2ZXomKlJ7NS0lvwcMj4qTjqIpeo5F/NhES0s0PaMVOXjYs5W4595KC4SwuEFwg3IJQbi5wez61U/V0nv1DSQOrrD4rVJNHHpe5EN8VPLLojaq/m02XZnYWs+DWeKY91sPd42Hmo2bF2JojTPyT35EvT4HIumV2W5NK+3M2/ZWxMPQ/w2QeLz3nn97gOkKHnq5Z+uujZqJ2mooadP026dusyN8hZcx1jQIBoEAtkLoBbUoBbqgFsygJA4lAekB5J8UBFtSgFszdANSgGpQC+ZsgF+nqgF+nqgF8ggGgQA8ggMdi9hYR/tYdhJ4hu4fFsFdMdXPH1Xr+cTlloaeTrMTlyMbX7E4M2FRp+7Un8wK6W4rUJfJe72yON+C0rrIqcF98y2d2Cw/wBrV8aZ/StqYxL/AKp5+5p/wMH+zvL2IHYHDjM1qvjTH6U/zEv+qefuP8DB/s7y9i5odiMG3N30jvxVI/KAtbsWqFtknd75m1mC0rb5rxX2yMlhOz+EZm3DsEW3hvnrLpXK+snf1nry5HZHQU0fVYnPmZJrdIHAWXNnmdaJkL9PVAL5CyAaBANAgFshdALalALdUAtmUA1KAkZ5lATKAFAQBGfFAAOJQADiUAiboBE9PVADn0QA8kAPIIBoEAta6ARGpQACM+KAAcSgAHEoBE3QCJ6IAc+nqgB5IAeQQDQIBayARGpQACOqAAcSgAHEoBE5lAL9EB6QEIAgCAFASUAQBAQEACAICUBCAIAgBQAoCUAQAICAgCAIAgCAICUBBQEoCEB//9k=" style="position: relative;left:-2px;bottom: 10px;" align="top" width="60px" height="40px"></span>
+						<span>MYJourney</span></a>
+					</div>
+					<div class="collapse navbar-collapse"
+						id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<form
+									class="form-inline navbar-form navbar-left justify-content-between"
+									ng-show="city==''">
+									<input ng-modal="city" id='tags' 
+										spellcheck="false" class="form-control" type="text"
+										placeholder="Search for location">
+
+								</form>
+								<a href="#" ng-hide="city==''"
+									ng-click="clear()">
+									<span
+										class="glyphicon glyphicon-screenshot">
+									</span>
+									<span>{{city}}</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a ng-click='checked(2)'>
+									<span
+										class="glyphicon glyphicon-user">
+									</span>
+									<span>&nbsp;Login</span>
+								</a>
+							</li>
+							<li>
+								<a ng-click='checked(2)'>
+									<span
+										class="glyphicon glyphicon-log-in">
+									</span>
+									<span>&nbsp;Signup</span>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+
+
+
+
+			<div class='container-fluid' style="position: relative;">
+				
+			<div class="row"  >
+			<div class="home-div" ng-show="city==null||city==''">
+				<div class="home-div-1" 
+					style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/07/The_night_view_of_Kofu_City.jpg'); width:104%; height:65%;background-repeat: none;background-size: cover;padding:0px;background-size: 100% 100%;position: relative;" >
+					
+						<p style="position: absolute;bottom: 10px;color:#ffff;left:10%;font-family: Impact, Charcoal, sans-serif;font-size: 180%;" class="">
+							MYJourney is a advisor for your trips to
+							best place with best price all around the
+							world.
+						</p>
+				</div>
+					
+				
+				
+				<div class="grid home-div-2" style=" margin-top: 30px; ">
+				
+					<div class="col-xs-12 col-sm-12 col-lg-offset-1  col-md-4 col-lg-4 col-xl-4 card grid-item">
+						<div><p style="color:orange;font-family: Georgia, serif; font-size: 140%">Want to save money?</p></div>
+<p style="font-family: Georgia, serif;font-size: 110%; color: #546d96">MyJourney compares prices from 200+ booking sites to help you find the lowest price on the right hotel for you.
+							</p>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-lg-offset-1  col-md-4 col-lg-4 col-xl-4 card grid-item">
+						<div><p style="color:#22b78d;font-family: Georgia, serif; font-size: 140%">Best tourist sites</p></div>
+<p style="font-family: Georgia, serif;font-size: 110%; color: #546d96">MyJourney provides best experience in tourism.We have dedicated team to explore the places 
+							</p>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-lg-offset-1  col-md-4 col-lg-4 col-xl-4 card grid-item">
+						<div><p style="color:#8047a3;font-family: Georgia, serif; font-size: 140%">Who we are?</p></div>
+<p style="font-family: Georgia, serif;font-size: 110%; color: #546d96">MyJourney has millions of customers across the world.Over 2000 customers uses MyJourney everyday
+							</p>
+					</div>
+					
+				</div>
+
+			
+	</div>
+
+				<div class=" main-div"
+					ng-show="city!=''&&city!=null">
+
+					<div id='city-details'>
+						<br><br><br>
+						<label>You searched for city :</label>
+						<div>
+							<label>
+								<h3>{{city}}</h3>
+							</label>
+						</div>
+					<div class=" form-group category- setter" >
+					<label class="col-sm-1 ">Category</label>
+				 <div class="col-sm-11">
+				<select class="form-control btn-mini"  ng-model="catfilter" ng-options="category as (category| uppercase) for category in category_list" >
+    <!-- <option selected value="">All</option>
+    <option value="hotel">Hotels</option>
+    <option value="restaurant">Restaurants</option>
+    <option value="point of interest">Point of Interest</option> -->
+     
+  </select>
+  
+  
+  </div>
+					
+					
+					</div>	
+					<div style="height:450px;" class="container category-table">
+					<br><br>
+							<div class="zones">
+      <div class="row-fluid" ng-repeat="row in [0,1,2]">
+      <div></div>
+        <div id="btn{{$index}}"  class="col-xs-12 col-sm-12 col-lg-offset-1  col-md-4 col-lg-4 col-xl-4 card grid-item"
+          ng-repeat="zone in place_list  |filter:city | filter:catfilter " 
+          ng-if="($index)/3 < row + 1 && ($index)/3 >= row " class="span4 btn">
+          <label style="color:#4286f4" >{{zone.name}}</label>
+          <div id='image'>
+          <img src={{zone.src}} width="60%" height="40%">
+          </div>
+          <div id='place_category' ><label><b>Category :</b> </label><label style="color: #4c3b7a">{{zone.category|uppercase}}</label></div>
+          
+        </div>
+      </div>
+    </div>		
+									
+									
+									
+									</div>	
+						
+						
+						
+					</div>
+					
+					
+				</div>
+</div>
+</div>
+
+
+
+
+		</body>
+<style>
+
+
+</style>
+</html>
